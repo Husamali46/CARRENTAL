@@ -17,7 +17,7 @@ public class Checker extends Employee{
 
     public void viewCheckVehicles(){
         try (Connection connection = Database.getConnection()){
-            String sql = "SELECT * FROM RENTED";
+            String sql = "SELECT * FROM RENTED WHERE AVAILABLE = TRUE";
             PreparedStatement stmt = connection.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
 
@@ -43,6 +43,9 @@ public class Checker extends Employee{
             stmt.setInt(2,carId);
             stmt.executeUpdate();
 
+            String sql1 = "DELETE FROM RENTED WHERE carId = ?";
+            PreparedStatement stmt1 = connection.prepareStatement(sql1);
+            stmt1.executeUpdate();
 
         }catch (SQLException e){
             System.out.println("ERROR");

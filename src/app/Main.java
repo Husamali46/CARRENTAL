@@ -180,7 +180,6 @@ public class Main {
                                     out.println("This vehicle does not exist");
 
                                 }else {
-
                                     out.println("Enter its status");
                                     String status = sc.nextLine();
 
@@ -246,6 +245,9 @@ public class Main {
                             } default: out.println("Invalid input");
                         }
                     }
+                }else {
+                    out.println("ERROR");
+
                 }
             } else if (role == 3) {
                 out.println("""
@@ -308,8 +310,11 @@ public class Main {
                             out.println("The Id is wrong");
                             return;
 
+                        }else {
+                            customer.rentVehicle(carId);
+
                         }
-                        customer.rentVehicle(); break;
+                        break;
                     }
                     case 6: {
                         out.println("Enter the id of the vehicle");
@@ -319,8 +324,9 @@ public class Main {
                             out.println("The Id is wrong");
                             return;
 
-                        }
-                        customer.returnVehicle(); break;
+                        }else {
+                        customer.returnVehicle(carId);
+                        }break;
                     } default: out.println("Invalid input");
                 }
             }else {
