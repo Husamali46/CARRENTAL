@@ -43,7 +43,7 @@ public class SystemService {
     }
     public void viewAllVehicles(){
         try (Connection connection =Database.getConnection()){
-            String sql = "SELECT * FROM VEHICLE LEFT JOIN RENTED ON vehicle.carId = rented.carId";
+            String sql = "SELECT * FROM VEHICLE";
             PreparedStatement stmt = connection.prepareStatement(sql);
 
             ResultSet rs = stmt.executeQuery();

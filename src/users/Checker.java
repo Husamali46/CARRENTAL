@@ -44,6 +44,7 @@ public class Checker extends Employee{
 
             String sql1 = "DELETE FROM RENTED WHERE carId = ?";
             PreparedStatement stmt1 = connection.prepareStatement(sql1);
+            stmt1.setInt(1,carId);
             stmt1.executeUpdate();
 
         }catch (SQLException e){
