@@ -7,12 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class OverLander extends Vehicle {
-
     public OverLander (Integer carId, String carName, String carBrand,String carType,String status,double rentPrice,boolean available){
         super(carId,carName,carBrand,carType,status,rentPrice,available);
 
     }
-
     public OverLander() {
         super();
     }

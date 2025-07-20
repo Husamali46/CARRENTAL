@@ -11,7 +11,6 @@ public class Bikes extends Vehicle{
         super(carId,carName,carBrand,carType,status,rentPrice,available);
 
     }
-
     public Bikes() {
         super();
     }

@@ -1,9 +1,6 @@
 package users;
 
 import util.Database;
-import product.Bikes;
-import product.Regular;
-import product.OverLander;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,9 +9,6 @@ import java.sql.SQLException;
 public class Customer {
     public int cstId;
     public String cstName;
-    Bikes bike;
-    Regular regular;
-    OverLander overLander;
 
     public Customer(int cstId,String cstName){
         this.cstId = cstId;

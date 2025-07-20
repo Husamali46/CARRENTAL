@@ -25,7 +25,6 @@ public abstract class Vehicle {
         this.rentPrice = rentPrice;
         this.available = available;
     }
-
     public Vehicle() {
 
     }
@@ -45,8 +44,5 @@ public abstract class Vehicle {
             return false;
         }
     }
-
-
-
 
 }

@@ -34,7 +34,6 @@ public class Checker extends Employee{
             System.out.println("ERROR");
         }
     }
-
     public  void deliverVehicle(int carId,String status){
         try (Connection connection = Database.getConnection()){
             String sql = "UPDATE VEHICLE SET status = ? AND available = true WHERE carId = ?";

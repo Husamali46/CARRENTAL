@@ -10,7 +10,6 @@ import java.sql.SQLException;
 public class SystemService {
     public SystemService (){
     }
-
     public void addVehicle(int carId, String carName, String carBrand, String carType,String status,double rentPrice){
         try (Connection connection = Database.getConnection()){
             String sql = "INSERT INTO VEHICLE (carId,carName,carBrand,status,rentPrice) VALUES (?,?,?,?,?)";

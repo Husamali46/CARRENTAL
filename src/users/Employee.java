@@ -20,7 +20,6 @@ public abstract class Employee {
     }
     public Employee() {
     }
-
     public boolean employeeCheck (Integer empId) {
         try (Connection connection = Database.getConnection()) {
             String sql = "SELECT * FROM EMPLOYEE WHERE empId = ?";

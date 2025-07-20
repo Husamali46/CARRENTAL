@@ -11,7 +11,6 @@ public class Regular extends Vehicle{
         super(carId,carName,carBrand,carType,status,rentPrice,available);
 
     }
-
     public Regular() {
         super();
     }

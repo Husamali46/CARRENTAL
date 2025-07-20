@@ -78,6 +78,4 @@ public class Manager {
     public void removeVehicle(int carId){
         systemService.removeVehicle(carId);
     }
-
-
 }

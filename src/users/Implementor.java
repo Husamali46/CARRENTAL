@@ -12,12 +12,4 @@ public class Implementor extends Employee{
     public Implementor() {
         super();
     }
-
-    public void viewRentedVehicles(){
-        systemService.viewRentedVehicles();
-    }
-
-    public void addVehicle(int carId, String carName, String carBrand,String carType,String status,double rentPrice){
-        systemService.addVehicle(carId,carName,carBrand, carType,status,rentPrice);
-    }
 }

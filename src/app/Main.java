@@ -188,7 +188,6 @@ public class Main {
                                 break;
                             }
                             default: out.println("Invalid input");
-
                         }
                     }
                 }else if (me == 2) {
