@@ -5,19 +5,25 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import util.Database;
-import service.SystemService;
+
 
 public abstract class Vehicle {
     int carId;
     String carName;
     String carBrand;
     String carType;
+    String status;
+    double rentPrice;
+    boolean available;
 
-    public Vehicle(int carId,String carName,String carBrand,String carType){
+    public Vehicle(int carId,String carName,String carBrand,String carType,String status,double rentPrice,boolean available){
         this.carId = carId;
         this.carName = carName;
         this.carBrand = carBrand;
         this.carType = carType;
+        this.status = status;
+        this.rentPrice = rentPrice;
+        this.available = available;
     }
 
     public Vehicle() {

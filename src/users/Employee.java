@@ -36,16 +36,4 @@ public abstract class Employee {
 
         }
     }
-
-    public void addEmployee(int empId ,String empName ,Double empSalary,String empRole){
-        manager.addEmployee(empId,empName,empSalary,empRole);
-    }
-
-    public void removeEmployee(int empId){
-        manager.removeEmployee(empId);
-    }
-
-    public void viewAllVehicles(){
-        systemService.viewAllVehicles();
-    }
 }

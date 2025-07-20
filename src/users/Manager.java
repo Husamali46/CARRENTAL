@@ -7,14 +7,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class Manager {
-    SystemService systemService;
+    private SystemService systemService;
     public int manId;
     public String manName;
 
     public Manager(int manId, String manName){
     this.manId = manId;
     this.manName = manName;
-
     }
 
     public Manager() {
@@ -72,12 +71,13 @@ public class Manager {
         }
     }
 
-    public void addVehicle(int carId, String carName, String carBrand,String carType){
-        systemService.addVehicle(carId,carName,carBrand, carType);
+    public void addVehicle(int carId, String carName, String carBrand,String carType,String status,double rentPrice){
+        systemService.addVehicle(carId,carName,carBrand, carType,status,rentPrice);
     }
 
     public void removeVehicle(int carId){
         systemService.removeVehicle(carId);
     }
+
 
 }

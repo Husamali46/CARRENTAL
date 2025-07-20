@@ -1,9 +1,6 @@
 package users;
 
-import util.Database;
 import service.SystemService;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class Implementor extends Employee{
     SystemService systemService;
@@ -17,14 +14,10 @@ public class Implementor extends Employee{
     }
 
     public void viewRentedVehicles(){
-        try (Connection connection = Database.getConnection()){
-
-        }catch (SQLException e ){
-            System.out.println("ERROR");
-        }
+        systemService.viewRentedVehicles();
     }
 
-    public void addVehicle(int carId, String carName, String carBrand,String carType){
-        systemService.addVehicle(carId,carName,carBrand, carType);
+    public void addVehicle(int carId, String carName, String carBrand,String carType,String status,double rentPrice){
+        systemService.addVehicle(carId,carName,carBrand, carType,status,rentPrice);
     }
 }
